@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Swipe</title>
+    <link rel="stylesheet" href="./example.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Swipe</h1>
+            <h2>Responsive Slide</h2>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- nav -->
+        <a href="#nav" class="open toggle-btn"><i class="icon-reorder"></i></a>
+        <nav id="nav">
+            <ul>
+                <li><a href="#" class="active">项目 1</a></li>
+                <li><a href="#">项目 2</a></li>
+                <li><a href="#">项目 3</a></li>
+                <li><a href="#">项目 4</a></li>
+                <li><a href="#">项目 5</a></li>
+            </ul>
+            <a href="#top" class="close toggle-btn"><i class="icon-remove-sign"></i></a>
+        </nav>
+        <!-- /nav -->
+
+        <!-- showcase -->
+        <div id="showcase">
+            <div id="slider" class="swipe">
+                <div class="swipe-wrap">
+                    <div>
+                        <img src="./images/01.jpg" alt="">
+                        <img src="./images/02.jpg" alt="">
+                        <img src="./images/03.jpg" alt="">
+                    </div>
+                </div>
+                <div class="slider-control">
+                    <button class="left" onclick="mySwipe.prev()"><i class="icon-angle-left"></i></button>
+                    <button class="right" onclick="mySwipe.next()"><i class="icon-angle-right"></i></button>
+                </div>
+            </div>
+        </div>
+        <!-- /showcase -->
+
+        <!-- TODO: writing article & the remaining code -->
+    </div>
+
+    <footer id="footer">
+        <div class="container">
+            <h5>&copy; Copyright</h5>
+        </div>
+    </footer>
+
+    <script src="./swipe.js" charset="utf-8"></script>
+    <script>
+        window.mySwipe = new Swipe(document.getElementById('slider'), {
+            startSlide: 2,
+            speed: 400,
+            auto: 3000,
+            continuous: true,
+            disableScroll: false,
+            stopPropagation: false,
+            callback: function(index, elem) {},
+            transitionEnd: function(index, elem) {}
+        });
+    </script>
+</body>
+</html>
