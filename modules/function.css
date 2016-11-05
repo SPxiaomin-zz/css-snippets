@@ -13,3 +13,7 @@
 .f-csp {
     cursor: pointer;
 }
+
+.f-pr {
+    position: relative;
+}
