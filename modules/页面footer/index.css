@@ -1,4 +1,4 @@
-/* TODO: stop thinking and flex */
+/* TODO: stop thinking */
 body {
     display: flex;
     flex-direction: column;
@@ -77,6 +77,13 @@ body {
     margin-top: 10px;
 }
 
-.footer-copyright-item {
+.footer-copyright-info1 {
     margin-top: 30px;
+}
+
+.footer-about-icon-weibo {
+    width: 100%;
+
+    background: url(./images/weibo.png) 0 0 no-repeat;
+    background-position: 40px;
 }

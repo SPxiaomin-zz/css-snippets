@@ -16,12 +16,12 @@ a {
  * function
  */
 
-.clearfix::before,
-.clearfix::after {
+.f-clearfix::before,
+.f-clearfix::after {
     content: " ";
     display: table;
 }
 
-.clearfix::after {
+.f-clearfix::after {
     clear: both;
 }
