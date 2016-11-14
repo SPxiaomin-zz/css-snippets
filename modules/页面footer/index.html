@@ -5,30 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>module-页面footer</title>
+    <link rel="stylesheet" href="../../node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" href="./global.css">
     <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <h3 class="title">页头</h3>
-        </header>
+    <main class="main">
+        <h3 class="main-title">主体</h3>
+    </main>
 
-        <div class="container__content">
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer-container clearfix">
 
-            <main class="main">
-                <h3 class="title">主体</h3>
-            </main>
+            <!-- copyright -->
+            <div class="footer-column footer-column-copyright">
+                <img src="./images/netnease-edu-logo.png" alt="" class="footer-copyright-img">
+                <p class="footer-copyright-info">©2014 icourse163.org 浙ICP备08114786号-1</p>
+                <p>icourses.cn 京ICP备12020869号-2 京公网安备110102000459-2</p>
+            </div>
+            <!-- /copyright -->
 
-            <aside class="aside">
-                <h3 class="title">边栏</h3>
-            </aside>
+            <!-- links -->
+            <div class="footer-column footer-column-links">
+                <h2 class="footer-title">友情链接</h2>
+                <ul>
+                    <li><a href="#" class="footer-link">网易公开课</a></li>
+                    <li><a href="#" class="footer-link">网易云课堂</a></li>
+                    <li><a href="#" class="footer-link">中国大学MOOC</a></li>
+                </ul>
+            </div>
+            <!-- /links -->
+
+            <!-- about -->
+            <div class="footer-column footer-column-about">
+                <h2 class="footer-title">我们</h2>
+                <ul>
+                    <li><a href="#" class="footer-link">关于</a></li>
+                    <li><a href="#" class="footer-link">联系</a></li>
+                    <li><a href="#" class="footer-link about-icon">关注</a></li>
+                </ul>
+            </div>
+            <!-- /about -->
+
+            <!-- more -->
+            <div class="footer-column footer-column-more">
+                <h2 class="footer-title">更多</h2>
+                <ul>
+                    <li><a href="#" class="footer-link" class="footer-link">常见问题</a></li>
+                    <li><a href="#" class="footer-link">意见反馈</a></li>
+                </ul>
+            </div>
+            <!-- /more -->
 
         </div>
-
-        <footer class="footer">
-            <!-- TODO: stop writing here && 自动化 -->
-            页脚
-        </footer>
-    </div>
+    </footer>
+    <!-- /footer -->
 </body>
 </html>

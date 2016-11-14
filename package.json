@@ -1,0 +1,24 @@
+{
+  "name": "css-snippets",
+  "version": "1.0.0",
+  "description": "## 导航",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SPxiaomin/css-snippets.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SPxiaomin/css-snippets/issues"
+  },
+  "homepage": "https://github.com/SPxiaomin/css-snippets#readme",
+  "dependencies": {
+    "browser-sync": "^2.17.6",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^3.0.1"
+  }
+}
