@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>圣杯布局float</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .clearfix::after {
+            content: " ";
+
+            display: table;
+
+            clear: both;
+        }
+
+        .wrap {
+            background: #d66464;
+        }
+
+        .left {
+            float: left;
+
+            width: 100px;
+            height: 180px;
+
+            background: #00f;
+        }
+
+        .right {
+            float: right;
+
+            width: 150px;
+            height: 200px;
+
+            background: #0f0;
+        }
+
+        .center {
+            height: 150px;
+
+            margin: 0 160px 0 110px;
+
+            background: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap clearfix">
+        <div class="left">left，宽度固定，高度可固定也可以由内容撑开</div>
+        <div class="right">right，宽度固定，高度可固定也可以由内容撑开</div>
+        <div class="center">center，可自适应浏览器宽度，高度可固定也可以由内容撑开</div>
+    </div>
+</body>
+</html>
