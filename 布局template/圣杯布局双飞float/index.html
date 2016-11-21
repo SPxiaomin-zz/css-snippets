@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>圣杯布局双飞float</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .clearfix::after {
+            content: " ";
+
+            display: table;
+
+            clear: both;
+        }
+
+        .wrap {
+            margin-left: 100px;
+            margin-right: 150px;
+
+            background: #fbd570;
+        }
+
+        .center {
+            float: left;
+
+            width: 100%;
+            height: 150px;
+
+            background: #b373da;
+        }
+
+        .left {
+            float: left;
+
+            width: 100px;
+            height: 180px;
+
+            margin-left: calc(-100% - 100px);
+            
+            background: #00f;
+        }
+
+        .right {
+            float: right;
+
+            width: 150px;
+            height: 200px;
+
+            margin-right: -150px;
+
+            background: #0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap clearfix">
+        <div class="center">center，可自适应浏览器宽度，高度可固定也可以由内容撑开</div>
+        <div class="left">left，宽度固定，高度可固定也可以由内容撑开</div>
+        <div class="right">right，宽度固定，高度可固定也可以由内容撑开</div>
+    </div>
+</body>
+</html>
