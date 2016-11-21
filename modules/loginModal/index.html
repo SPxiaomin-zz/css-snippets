@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>login Modal</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <!-- modal login -->
+    <div class="modal modal-login" id="js_modal-login">
+        <div class="modal-container">
+
+            <!-- close -->
+            <div class="modal-close"><span class="f-csp" id="js_modal_login_close">X</span></div>
+            <!-- /close -->
+
+            <div class="modal-login-body">
+                <h2 class="modal-login-title">登录网易云课堂</h2>
+                <form>
+                    <input type="text" placeholder="账号" class="modal-login-input" id="js_modal_login_username">
+                    <input type="password" placeholder="密码" class="modal-login-input" id="js_modal_login_password">
+                    <a href="javascript:void(0);" class="modal-login-submit" id="js_modal_login_submit">登录</a>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- /modal login -->
+
+    <button class="show-login-modal" id="js_show_login_modal">显示登录模态框</button>
+
+    <script src="./js/jquery.js" charset="utf-8"></script>
+    <script src="./js/index.js" charset="utf-8"></script>
+</body>
+</html>
