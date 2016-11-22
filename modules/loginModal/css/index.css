@@ -2,7 +2,7 @@ body {
     font: 14px/1.4286 "sens-serif";
 }
 
-.show-modal {
+.show-modal-login {
     position: fixed;
     top: 50%;
     left: 50%;
