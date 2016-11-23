@@ -98,6 +98,14 @@ auto 注意事项: 当该元素被设为浮动时，该元素的 width 就变成
                 margin: 0;
             }
 
+            .clearfix::after {
+                content: " ";
+
+                display: table;
+
+                clear: both;
+            }
+
             .wrap {
                 margin-left: 100px;
                 margin-right: 150px;
@@ -105,12 +113,13 @@ auto 注意事项: 当该元素被设为浮动时，该元素的 width 就变成
                 background-color: #FBD570;
             }
 
-            .clearfix::after {
-                content: " ";
+            .center {
+                float: left;
 
-                display: table;
+                width: 100%;
+                height: 150px;
 
-                clear: both;
+                background: #555;
             }
 
             .left {
@@ -134,15 +143,6 @@ auto 注意事项: 当该元素被设为浮动时，该元素的 width 就变成
 
                 background: #0f0;
             }
-
-            .center {
-                float: left;
-
-                width: 100%;
-                height: 150px;
-
-                background: #555;
-            }
         </style>
     </head>
     <body>
@@ -154,7 +154,7 @@ auto 注意事项: 当该元素被设为浮动时，该元素的 width 就变成
     </body>
     </html>
 
-代码中我用到了 calc() 函数，如果本例中不使用 calc 函数，通过设置 wrap 左边距为 0, left 左边距 -100%, 然后在 center 中多加一层子块 div 设置 margin-left: 100px，可以达到同样的效果。
+代码中我用到了 calc() 函数（特别注意减号两边需要有空格），如果本例中不使用 calc 函数，通过设置 wrap 左边距为 0, left 左边距 -100%, 然后在 center 中多加一层子块 div 设置 margin-left: 100px，可以达到同样的效果，见 `圣杯布局双飞float/index-1.html`。
 
 ### 普通流布局
 
