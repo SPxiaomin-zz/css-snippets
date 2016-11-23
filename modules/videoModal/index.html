@@ -12,15 +12,41 @@
 </head>
 <body>
     <!-- modal video -->
-    <!-- TODO: stop writing here -->
-    <div>
-        <div>
+    <div class="modal modal-video f-dn" id="js_modal_video">
 
-            <div></div>
+        <!-- container -->
+        <div class="modal-container">
 
-            <div></div>
+            <!-- close -->
+            <div class="modal-close"><span class="f-csp" id="js_modal_video_close"><i class="fa fa-times fa-lg" aria-hidden="true"></i></span></div>
+            <!-- /close -->
+
+            <!-- body -->
+            <div class="modal-video-body">
+                <p class="modal-video-title">请观看下面的视频</p>
+
+                <video autobuffer="" controls="" class="modal-video-player">
+                    <source src="http://mov.bn.netease.com/open-movie/nos/mp4/2014/12/30/SADQ86F5S_shd.mp4" type="video/mp4">
+                    <!-- When HTML5 was disabled, using the object element -->
+                    <object type="video/mp4">
+                        <param name="src" value="http://mov.bn.netease.com/open-movie/nos/mp4/2014/12/30/SADQ86F5S_shd.mp4">
+                        <param name="autoplay" value="false">
+                        <param name="autoStart" value="0">
+                        <p><a href="http://mov.bn.netease.com/open-movie/nos/mp4/2014/12/30/SADQ86F5S_shd.mp4">Download this video file.</a></p>
+                    </object>
+                </video>
+            </div>
+            <!-- /body -->
+
         </div>
+        <!-- /container -->
+
     </div>
     <!-- /modal video -->
+
+    <button class="show-modal-video" id="js_show_modal_video">显示视频播放模态框</button>
+
+    <script src="./js/jquery.js" charset="utf-8"></script>
+    <script src="./js/index.js" charset="utf-8"></script>
 </body>
 </html>
