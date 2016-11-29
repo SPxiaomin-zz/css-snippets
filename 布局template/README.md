@@ -237,7 +237,7 @@ auto 注意事项: 当该元素被设为浮动时，该元素的 width 就变成
     </body>
     </html>
 
-双飞实现的话，注意 html 的顺序是 `center>right>left` 并且改变左栏的 margin-left: calc(-100% - 100px) 就可以了（`html>left>right` 顺序的话就达不到预期的效果）。
+双飞实现的话，注意 html 的顺序是 `center>right>left` 并且改变左栏的 margin-left: calc(-100% - 100px) 就可以了（`center>left>right` 顺序的话就达不到预期的效果）。
 
 如果不能使用 calc 的话，可以在 center 里面在加一层，跟浮动一样的处理方式。不过最简单的方式是通过使用 css3 的 box-sizing 属性来实现。
 

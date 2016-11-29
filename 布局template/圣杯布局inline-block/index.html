@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>圣杯布局inline-block</title>
+    <style>
+        .wrap {
+            margin-left: 100px;
+            margin-right: 150px;
+
+            font-size: 0;
+            letter-spacing: -4px; /* 用于兼容safari，根据不同字体字号或许需要做一定的调整 */
+
+            background: #fbd570;
+        }
+
+        .wrap * {
+            font-size: 1rem;
+            letter-spacing: normal;
+        }
+
+        .left {
+            display: inline-block;
+            vertical-align: top;
+
+            width: 100px;
+            height: 180px;
+
+            margin-left: -100px;
+
+            background: #00f;
+        }
+
+        .center {
+            display: inline-block;
+            vertical-align: top;
+
+            width: 100%;
+            min-width: 150px;
+            height: 150px;
+
+            background: #b373da;
+        }
+
+        .right {
+            display: inline-block;
+            vertical-align: top;
+
+            width: 150px;
+            height: 200px;
+
+            margin-right: -150px;
+
+            background: #0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="left">left，宽度高度固定</div>
+        <div class="center">center，可以自适应浏览器宽度，高度固定</div>
+        <div class="right">right，宽度高度固定</div>
+    </div>
+</body>
+</html>
