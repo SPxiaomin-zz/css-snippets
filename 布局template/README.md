@@ -181,12 +181,14 @@ auto 注意事项: 当该元素被设为浮动时，该元素的 width 就变成
                 margin-right: 150px;
 
                 font-size: 0;
+                letter-spacing: -4px; /* 用于兼容safari，根据不同字体字号或许需要做一定的调整 */
 
                 background-color: #fbd570;
             }
 
             .wrap * {
                 font-size: 1rem;
+                letter-spacing: normal;
             }
 
             .left {
@@ -202,6 +204,18 @@ auto 注意事项: 当该元素被设为浮动时，该元素的 width 就变成
                 background-color: #00f;
             }
 
+            .center {
+                display: inline-block;
+
+                vertical-align: top;
+
+                width: 100%;
+                min-width: 150px;
+                height: 150px;
+
+                background-color: #b373da;
+            }
+
             .right {
                 display: inline-block;
 
@@ -215,17 +229,6 @@ auto 注意事项: 当该元素被设为浮动时，该元素的 width 就变成
                 background-color: #0f0;
             }
 
-            .center {
-                display: inline-block;
-
-                vertical-align: top;
-
-                width: 100%;
-                min-width: 150px;
-                height: 150px;
-
-                background-color: #b373da;
-            }
         </style>
     </head>
     <body>
@@ -239,7 +242,7 @@ auto 注意事项: 当该元素被设为浮动时，该元素的 width 就变成
 
 双飞实现的话，注意 html 的顺序是 `center>right>left` 并且改变左栏的 margin-left: calc(-100% - 100px) 就可以了（`center>left>right` 顺序的话就达不到预期的效果）。
 
-如果不能使用 calc 的话，可以在 center 里面在加一层，跟浮动一样的处理方式。不过最简单的方式是通过使用 css3 的 box-sizing 属性来实现。
+如果不能使用 calc 的话，可以在 center 里面再加一层，跟浮动一样的处理方式。不过最简单的方式是通过使用 css3 的 box-sizing 属性来实现。
 
     <!DOCTYPE html>
     <html lang="en">
