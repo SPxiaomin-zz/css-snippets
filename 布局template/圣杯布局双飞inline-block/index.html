@@ -10,8 +10,58 @@
             margin: 0;
         }
 
+        .wrap {
+            margin-right: 150px;
+
+            font-size: 0;
+            letter-spacing: -4px; /* 用于兼容safari，根据不同字体字号或许需要做一定的调整 */
+
+            background: #fbd570;
+        }
+
+        .wrap * {
+            font-size: 1rem;
+            letter-spacing: normal;
+        }
+
         .center {
-            
+            display: inline-block;
+            vertical-align: top;
+
+            width: 100%;
+            min-width: 150px;
+            height: 150px;
+
+            box-sizing: border-box;
+            padding-left: 100px;
+
+            background: #b373da;
+            background-origin: content-box;;
+            background-clip: content-box;;
+        }
+
+        .right {
+            display: inline-block;
+            vertical-align: top;
+
+            width: 150px;
+            height: 200px;
+
+            margin-right: -150px;
+
+            background: #0f0;
+        }
+
+        .left {
+            display: inline-block;
+            vertical-align: top;
+
+            width: 100px;
+            height: 180px;
+
+            margin-left: -100%;
+
+            background: #00f;
         }
     </style>
 </head>
