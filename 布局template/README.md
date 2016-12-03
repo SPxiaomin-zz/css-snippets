@@ -258,12 +258,31 @@ auto 注意事项: 当该元素被设为浮动时，该元素的 width 就变成
                 margin-right: 150px;
 
                 font-size: 0;
+                letter-spacing: -4px; /* 用于兼容safari，根据不同字体字号或许需要做一定的调整 */
 
                 background-color: #fbd570;
             }
 
             .wrap * {
                 font-size: 1rem;
+                letter-spacing: normal;
+            }
+
+            .center {
+                display: inline-block;
+
+                vertical-align: top;
+
+                width: 100%;
+                min-width: 150px;
+                height: 150px;
+
+                box-sizing: border-box;
+                padding-left: 100px;
+
+                background-color: #b373da;
+                background-clip: content-box;
+                background-origin: content-box;
             }
 
             .left {
@@ -290,23 +309,6 @@ auto 注意事项: 当该元素被设为浮动时，该元素的 width 就变成
                 margin-right: -150px;
 
                 background-color: #0f0;
-            }
-
-            .center {
-                display: inline-block;
-                box-sizing: border-box;
-
-                vertical-align: top;
-
-                width: 100%;
-                min-width: 150px;
-                height: 150px;
-
-                padding-left: 100px;
-
-                background-color: #b373da;
-                background-clip: content-box;
-                background-origin: content-box;
             }
         </style>
     </head>
