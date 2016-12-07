@@ -325,7 +325,7 @@ auto 注意事项: 当该元素被设为浮动时，该元素的 width 就变成
 
 基础知识补充:
 
-absolute 定位的基准是最近的 非static 定位父元素，而 fixed 是相对于 html 根节点的定位。
+absolute 定位的基准是最近的 非static 定位父元素或者 inital containing block，而 fixed 是相对于 viewport 定位。
 
 两种定位都会脱离普通流。
 
