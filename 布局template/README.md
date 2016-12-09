@@ -363,29 +363,21 @@ absolute 定位中 top: 0; left: 0; 的位置在父元素的 padding-box 左上�
                 background-color: #00f;
             }
 
+            .center {
+                height: 150px;
+
+                background-color: #b373da;
+            }
+
             .right {
                 position: absolute;
                 top: 0;
-                right: 0;
+                right: -150px;
 
                 width: 150px;
                 height: 200px;
 
-                margin-right: -150px;
-
                 background-color: #0f0;
-            }
-
-            .center {
-                position: absolute;
-                top: 0;
-                left: 0;
-
-                width: 100%;
-                min-width: 150px;
-                height: 150px;
-
-                background-color: #b373da;
             }
         </style>
     </head>
@@ -406,7 +398,7 @@ absolute 定位中 top: 0; left: 0; 的位置在父元素的 padding-box 左上�
 
 基础知识点补充:
 
-max-width: 768px 等价于 <768px
+max-width: 768px 等价于 <=768px
 
 min-width: 768px 等价于 >=768px
 
