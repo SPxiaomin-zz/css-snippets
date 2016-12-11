@@ -443,7 +443,6 @@ min-width: 768px 等价于 >=768px
             @media (max-width: 768px) {
                 .HolyGrail-body {
                     flex-direction: column;
-                    flex: 1;
                 }
 
                 .HolyGrail-nav,
@@ -471,7 +470,7 @@ min-width: 768px 等价于 >=768px
     </body>
     </html>
 
-双飞的话，将 .HolyGrail-body 中的元素顺序改为 `.HolyGrail-content > .HolyGrail-nav > .HolyGrail-ads` 并且设置 .HolyGrail-nav 的 order: -1 即可实现。
+双飞的话，将 .HolyGrail-body 中的元素顺序改为 `.HolyGrail-content > .HolyGrail-nav > .HolyGrail-ads` 并且为 .HolyGrail-nav 增加 order: -1 即可实现。
 
 ### References
 
