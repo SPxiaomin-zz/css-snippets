@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>宽度自适应布局</title>
-    <style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>圣杯布局flex</title>
+    <style media="screen">
         body {
             margin: 0;
         }
@@ -11,8 +13,6 @@
         .HolyGrail {
             display: flex;
             flex-direction: column;
-
-            min-height: 100vh;
         }
 
         header,
@@ -25,41 +25,22 @@
             flex: 1;
         }
 
-        .HolyGrail-content {
-            flex: 1;
-        }
-
         .HolyGrail-nav,
         .HolyGrail-ads {
             flex: 0 0 12em;
         }
 
-        @media (max-width: 768px) {
-            .HolyGrail-body {
-                flex-direction: column;
-                flex: 1;
-            }
-
-            .HolyGrail-nav,
-            .HolyGrail-ads,
-            .HolyGrail-content {
-                flex: auto;
-            }
+        .HolyGrail-content {
+            flex: 1;
         }
     </style>
 </head>
 <body class="HolyGrail">
     <header>...</header>
     <div class="HolyGrail-body">
-        <nav class="HolyGrail-nav">
-            vt. 切成方块 n. 骰子 vi. 掷骰子 n. (Dice)人名；(英)戴斯
-        </nav>
-        <main class="HolyGrail-content">
-            DICE，全称EA Digital Illusions Creative Entertainment AB，又称EA DICE，是美国艺电旗下的一个游戏工作室，总部位于瑞典斯德哥尔摩。DICE最成功的游戏是其出品的战地系列游戏。关于游戏用具或赌具“dice”，请阅读“骰子”或“色子”词条
-        </main>
-        <aside class="HolyGrail-ads">
-            挤他车以占领先地位(或有利位置)，紧逼抢挡 (两个驾驶员之间的)近距离追逐，抢拉追逐，紧逼抢挡，争夺有利位置的一场势均力敌的比赛
-        </aside>
+        <div class="HolyGrail-nav"></div>
+        <div class="HolyGrail-content"></div>
+        <div class="HolyGrail-ads"></div>
     </div>
     <footer>...</footer>
 </body>
