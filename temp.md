@@ -1,21 +1,28 @@
-图片宽度一直width:100%，依次点击3个按钮，结果随着margin, padding, border的出现，其可用宽度自动跟着减小，形成了自适应效果。就像放在容器中的水流一样，内容区域会随着margin, padding, border的出现自动填满剩余空间，这就是块状元素的流体特性。
+## 块状元素的流体特性与自适应布局
+
+就像放在容器中的水流一样，内容区域会随着margin, padding, border的出现自动填满剩余空间，这就是块状元素的流体特性。
 
 然而，利用块状元素流体特性实现的自适应布局有个不足，就是，我们需要知道浮动或绝对定位内容的尺寸。
 
+```html
 .flow-box {
     width: 500px; background-color: #eee; overflow:auto; resize:horizontal;
 }
+
 .flow-content {
     margin-left: 150px;
 }
+
 <div class="flow-box">
     <img src="mm1.jpg" width="128" style="float:left;">
     <div class="flow-content"><img src="mm1.jpg" width="100%" height="190"></div>
 </div>
+
 <div class="flow-box">
     <img src="mm1.jpg" width="128" style="position:absolute;">
     <div class="flow-content"><img src="mm1.jpg" width="100%" height="190"></div>
 </div>
+```
 
 三、元素的BFC特性与自适应布局
 
