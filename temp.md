@@ -4,29 +4,73 @@
 
 然而，利用块状元素流体特性实现的自适应布局有个不足，就是，我们需要知道浮动或绝对定位内容的尺寸。
 
+<!-- 下面的代码演示换成codepen -->
+
 ```html
 .flow-box {
-    width: 500px; background-color: #eee; overflow:auto; resize:horizontal;
+    overflow: auto;
+    resize: horizontal;
+
+    width: 300px;
+
+    background: #eee;
+}
+
+.flow {
+    width: 50px;  /* 关键代码 */
+    height: 50px;
+
+    line-height: 50px;
+    text-align: center;
+
+    background: rgba(0, 0, 0, 0.2);
 }
 
 .flow-content {
-    margin-left: 150px;
+    height: 190px;
+
+    margin-left: 50px; /* 关键代码 */
+
+    line-height: 190px;
+    text-align: center;
+
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/**
+ * float 版本
+ */
+
+.fl {
+    float: left; /* 关键代码 */
+}
+
+/**
+ * absolute 版本
+ */
+
+.abs {
+    position: absolute; /* 关键代码 */
 }
 
 <div class="flow-box">
-    <img src="mm1.jpg" width="128" style="float:left;">
-    <div class="flow-content"><img src="mm1.jpg" width="100%" height="190"></div>
+    <div class="fl flow">float</div>
+    <div class="flow-content">
+        flow-content
+    </div>
 </div>
 
 <div class="flow-box">
-    <img src="mm1.jpg" width="128" style="position:absolute;">
-    <div class="flow-content"><img src="mm1.jpg" width="100%" height="190"></div>
+    <div class="abs flow">absolute</div>
+    <div class="flow-content">
+        flow-content
+    </div>
 </div>
 ```
 
-三、元素的BFC特性与自适应布局
+## 元素的BFC特性与自适应布局
 
-1. BFC元素简介与基本表现
+### BFC元素简介与基本表现
 
 BFC元素特性表现原则就是，内部子元素再怎么翻江倒海，翻云覆雨都不会影响外部的元素。所以，避免margin穿透啊，清除浮动什么的也好理解了。
 
